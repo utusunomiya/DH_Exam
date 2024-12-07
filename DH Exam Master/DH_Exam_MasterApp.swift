@@ -13,7 +13,7 @@ struct DH_Exam_MasterApp: App {
         //データベース構築
         do {
             let importer = try DatabaseImporter()
-            print("いんすたんす生成完了")
+            print("DBインスタンス生成完了")
             try importer.initializeDatabase()
             print("初期化完了")
         } catch {
