@@ -18,44 +18,64 @@ struct ContentView: View {
                     Text("問題の種類を選択してください")
                         .font(.largeTitle)
                     Spacer()
-                    
-                    NavigationLink(destination: selectDetail(selectedCategory: "歯科医療補助論")) {
-                        Text("歯科医療補助論")
-                            .font(.title)
-                            .foregroundStyle(Color.green)
-                            .frame(width: 200,height:80)
-                            .background(Color.white)
-                    }
-                    
-                    NavigationLink(destination: selectDetail(selectedCategory: "歯科予防処置論")) {
-                        Text("歯科予防処置論")
-                            .font(.title)
-                            .foregroundStyle(Color.green)
-                            .frame(width: 200,height:80)
-                            .background(Color.white)
-                    }
-                    
-                    NavigationLink(destination: selectDetail(selectedCategory: "歯科保健指導論")) {
-                        Text("歯科保険指導論")
-                            .font(.title)
-                            .foregroundStyle(Color.green)
-                            .frame(width: 200,height:80)
-                            .background(Color.white)
-                    }
+                    VStack {
+                        NavigationLink(destination: selectDetail(selectedCategory: "歯科医療補助論")) {
+                            Text("歯科医療補助論🥺")
+                                .font(.title)
+                                .foregroundStyle(Color.green)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.white)
+                                .cornerRadius(20)
+                        }
+                        
+                        NavigationLink(destination: selectDetail(selectedCategory: "歯科予防処置論")) {
+                            Text("歯科予防処置論😍")
+                                .font(.title)
+                                .foregroundStyle(Color.green)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.white)
+                                .cornerRadius(20)
+                        }
+                        
+                        NavigationLink(destination: selectDetail(selectedCategory: "歯科保健指導論")) {
+                            Text("歯科保険指導論🤩")
+                                .font(.title)
+                                .foregroundStyle(Color.green)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.white)
+                                .cornerRadius(20)
+                        }
+                    }.padding(.horizontal,32)
                     
                     Spacer()
                     
-                    Button {
-                        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
-
-                    }label: {
-                        Text("あ")
+                    HStack {
+                                    Spacer()
+                                    VStack {
+                                        Image(systemName: "globe")
+                                        Text("HOME")
+                                            .font(.caption)
+                                    }
+                                    
+                                    Spacer()
+                                    VStack {
+                                        Image(systemName: "globe")
+                                        Text("ブックマーク")
+                                            .font(.caption)
+                                    }
+                                    Spacer()
+                                }
+                                .padding()
+                                .background(Color.white)
+                                .shadow(radius: 2)
                     }
                 }
             }
         }
     }
-}
 
 #Preview {
     ContentView()
