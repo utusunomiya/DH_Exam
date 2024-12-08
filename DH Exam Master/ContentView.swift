@@ -15,7 +15,7 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 VStack {
                     Spacer()
-                    Text("問題の種類を選択してください")
+                    Text("今日も頑張ってこ😉")
                         .font(.largeTitle)
                     Spacer()
                     VStack {
